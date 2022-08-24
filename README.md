@@ -1,8 +1,8 @@
 # FTP-Server-Android
 
 Para montar nuestro servidor FTP en Android necesitamos lo siguiente:
-- Terminal Termux instalado en nuestro dispositivo
-- Instalar python en el terminal y el modulo pyftpdlib
+- **Terminal Termux instalado en nuestro dispositivo**
+- **Instalar python en el terminal y el modulo pyftpdlib**
 
 ## Instalar Termux
 
@@ -40,9 +40,38 @@ Después instalamos el módulo pyftpdlib con el comando ``python -m pip install 
 
 Al terminar de configurar Termux, creamos un script de python como el que se encuentra en el repositorio llamado [ftpserver.py](https://github.com/vaeruiz/FTP-Server-Android/blob/main/ftpserver.py) que levantará el servidor cada vez que lo ejecutemos, en el script de este repositorio se explican de forma breve algunas instrucciones que tienen mayor peso.
 
+## Creacion de usuarios y permisos
+
+Es posible crear varios usuarios y asignarles diferentes permisos, estes tipo de configuracion se tiene que hacer debajo de la clase ``authorizer = DummyAuthorizer()``, podemos crear dos tipos de usuarios:
+
+- **Usuario anonimo.** Con el que podremos conectarnos al servidor sin necesidad de iniciar sesion, lo declaramos con la instruccion ``authorizer.add_anonymous``.
+- **Usuario personal.** Tendremos que iniciar sesion para acceder al servidor, se declara con ``authorizer.add_user``.
+
+De la misma forma, podemos asignar dos tipos de permisos:
+
+- **Permisos de lectura.** ``perm='elr``
+- **Permisos de lectura y escritura.** Estos incluyen un control total del almacenamiento, ``perm='elradfmw'``
+
+Además, hay que indicar a que directorio tienen acceso los usuarios, tomando ejemplo del [script](https://github.com/vaeruiz/FTP-Server-Android/blob/main/ftpserver.py), podemos crear un usuario anonimo de solo lectura con la instruccion:
+
+``authorizer = DummyAuthorizer()``
+
+``authorizer.add_anonymous(FTP_DIRECTORY, perm='elr')``
+
+De una manera parecida, podemos crear un usuario propio que tenga permisos de lectura y escritura:
+
+``authorizer = DummyAuthorizer()``
+
+``authorizer.add_user(FTP_USER, FTP_PASSWORD, FTP_DIRECTORY, perm='elradfmw')``
+
+En este caso, para el nombre de usuario, contraseña, y directorio de acceso se han hecho uso de las variables FTP_USER, FTP_PASSWORD y FTP_DIRECTORY, pero se pueden sustituir y configurar tantos usuarios como sean necesarios.
+
+## Levantar el servidor y conectarse
+
 Después de todo esto solo queda levantar el servidor, para hacerlo ejecutamos el comando ``python ftpserver.py``, si queremos levantarlo en segundo plano añadimos un " &" al final del comando, si no hay errores, se verá un mensaje como el siguiente:
 
 ![imagen9](/images/img9.png)
 
-Para conectarnos al servidor utilizaremos el cliente [Filezilla](https://filezilla-project.org), pondremos la direccion ip de nuestro dispositivo y el puerto que esté utilizando (por lo general el 8021) y le damos a conectar, seguidamente veremos los directorios que tenemos configurados
+Para conectarnos a el, podemos utilizar un cliente ftp como por ejemplo [Filezilla](https://filezilla-project.org), indicamos la direccion IP que ha tomado el servidor, e iniciamos sesion si es necesario, hecho esto, veremos la lista de directorios que hemos configurado.
 
+![imagen10](/images/img10.png)
