@@ -3,12 +3,12 @@ from pyftpdlib.authorizers import DummyAuthorizer
 from pyftpdlib.handlers import FTPHandler
 from pyftpdlib.servers import FTPServer
 
-# Puerto de servidor
+# Puerto del servidor
 FTP_PORT = 8021
 
 # Variables para usuario
-FTP_USER = 'prueba'
-FTP_PASSWORD = 'prueba'
+FTP_USER = 'user'
+FTP_PASSWORD = 'password'
 
 # Directorio a mostrar, de forma predeterminada muestra todo el almacenamiento del dispositivo
 FTP_DIRECTORY = '/storage/emulated/0'
@@ -25,11 +25,8 @@ print(f'Pulsa CTRL+C para salir \n')
 
 authorizer = DummyAuthorizer()
 
-# Permiso de solo lectura a usuario anonimo
-#authorizer.add_anonymous(FTP_DIRECTORY, perm='elr')
-
 # Permiso de lectura y escritura a usuario anonimo
-authorizer.add_anonymous(FTP_DIRECTORY, perm='elradfmw')
+authorizer.add_anonymous(FTP_DIRECTORY, perm='elr')
 authorizer.add_user(FTP_USER, FTP_PASSWORD, FTP_DIRECTORY, perm='elradfmw')
 
 handler = FTPHandler
