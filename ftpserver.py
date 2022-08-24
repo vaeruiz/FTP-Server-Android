@@ -31,8 +31,9 @@ authorizer.add_user(FTP_USER, FTP_PASSWORD, FTP_DIRECTORY, perm='elradfmw')
 
 handler = FTPHandler
 handler.authorizer = authorizer
-handler.banner = 'Termux FTP Server :D'
-handler.passive_ports = range(50000, 55535)
+handler.banner = "pyftpdlib based ftpd ready."
+#handler.masquerade_address = '151.25.42.11'
+#handler.passive_ports = range(50000, 55535)
 
 address = ('', FTP_PORT)
 server = FTPServer(address, handler)
