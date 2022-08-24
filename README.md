@@ -28,4 +28,8 @@ Lo primero que haremos será asegurarnos de que estamos en el directorio home de
 
 Lo siguiente es actualizar los repositorios de la terminal haciendo un update-upgrade, ejecutamos los comandos ``apt update`` y ``apt upgrade``
 
-Cuando termine de actualizarse la terminal, instalamos Python ejecutando el comando ``pkg install python``
+Cuando termine de actualizarse la terminal, instalamos Python ejecutando el comando ``pkg install python``.
+
+Después instalamos el módulo pyftpdlib con el comando ``python -m pip install pyftpdlib``. Es posible que de un error, si se da el caso, instalamos la herramienta openssl-tool (``apt install openssl-tool``) y ejecutamos de nuevo el comando para instalar el módulo.
+
+Con esto hecho, creamos un script de python como el que se encuentra en el repositorio [ftpserver.py](ftpserver.py) que levantará el servidor FTP cada vez que lo ejecutemos, en el archivo de este
