@@ -6,7 +6,7 @@ from pyftpdlib.servers import FTPServer
 # Puerto de servidor
 FTP_PORT = 8021
 
-# Directorio a mostrar
+# Directorio a mostrar, de forma predeterminada muestra todo el almacenamiento del dispositivo
 FTP_DIRECTORY = '/storage/emulated/0'
 
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
