@@ -26,7 +26,12 @@ Para acceder a nuestros directorio al levantar el servidor FTP, tenemos que darl
 
 Lo siguiente que haremos será entrar a la terminal, al abrirlo por primera vez se harán unas configuraciones, cuando termine, nos encontraremos nuestra terminal lista para trabajar.
 
+<center>
+
 ![imagen8](/images/img8.png)
+
+</center>
+
 
 Lo primero que haremos será asegurarnos de que estamos en el directorio home de Termux, este directorio /data/data/com.termux/files/home, podemos ver en que directorio estamos actualmente ejecutando el comando ``pwd``, si no nos encontramos en dicho directorio, basta con ejecutar ``cd``, es importante que nos encontremos en esa ruta.
 
@@ -40,4 +45,8 @@ Con esto hecho, creamos un script de python como el que se encuentra en el repos
 
 Después de todo esto solo queda levantar el servidor, para hacerlo ejecutamos el comando ``python ftpserver.py``, si queremos levantarlo en segundo plano añadimos un " &" al final del comando, si no hay errores, se verá un mensaje como el siguiente:
 
+<center>
+
 ![imagen9](/images/img9.png)
+
+</center>
