@@ -12,6 +12,6 @@ Termux es un terminal adaptado para Android con el que podremos hacer acciones p
 
 Y descargamos su APK
 
-![imagen1](/images/img2.png)
+![imagen2](/images/img2.png)
 
 Cuando se descargue, la instalamos en nuestro dispositivo Android
