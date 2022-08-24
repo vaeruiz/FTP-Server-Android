@@ -8,13 +8,13 @@ Para montar nuestro servidor FTP en Android necesitamos lo siguiente:
 
 Termux es un terminal adaptado para Android con el que podremos hacer acciones parecidas a las de un terminal Ubuntu, para instalarlo vamos a la web [f-droid](https://f-droid.org/en/packages/com.termux/) 
 
-![imagen1](/images/img1.PNG)
+![imagen1](/images/img1.pnh)
 
 Y descargamos su APK
 
 ![imagen2](/images/img2.png)
 
-Cuando se descargue, la instalamos en nuestro dispositivo Android
+Cuando se descargue, lo instalamos en nuestro dispositivo Android
 
 ![imagen3](/images/img3.png)
 
