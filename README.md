@@ -32,4 +32,6 @@ Cuando termine de actualizarse la terminal, instalamos Python ejecutando el coma
 
 Después instalamos el módulo pyftpdlib con el comando ``python -m pip install pyftpdlib``. Es posible que de un error, si se da el caso, instalamos la herramienta openssl-tool (``apt install openssl-tool``) y ejecutamos de nuevo el comando para instalar el módulo.
 
-Con esto hecho, creamos un script de python como el que se encuentra en el repositorio llamado [ftpserver.py](https://github.com/vaeruiz/FTP-Server-Android/blob/main/ftpserver.py) que levantará el servidor cada vez que lo ejecutemos, en el script de este repositorio se explican de forma breve algunas instrucciones qur tienen mayor peso.
+Con esto hecho, creamos un script de python como el que se encuentra en el repositorio llamado [ftpserver.py](https://github.com/vaeruiz/FTP-Server-Android/blob/main/ftpserver.py) que levantará el servidor cada vez que lo ejecutemos, en el script de este repositorio se explican de forma breve algunas instrucciones que tienen mayor peso.
+
+Después de todo esto solo queda levantar el servidor, para hacerlo ejecutamos el comando ``python ftpserver.py``, si queremos levantarlo en segundo plano añadimos un " &" al final del comando, si no hay errores, se verá un mensaje como el siguiente
