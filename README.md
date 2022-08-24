@@ -75,3 +75,7 @@ Después de todo esto solo queda levantar el servidor, para hacerlo ejecutamos e
 Para conectarnos a el, podemos utilizar un cliente ftp como por ejemplo [Filezilla](https://filezilla-project.org), indicamos la direccion IP que ha tomado el servidor, e iniciamos sesion si es necesario, hecho esto, veremos la lista de directorios que hemos configurado.
 
 ![imagen10](/images/img10.png)
+
+## Documentación oficial
+
+Para ver toda la información disponible acerca de pyftpdlib puedes visitar su sitio [web](https://pyftpdlib.readthedocs.io) oficial
