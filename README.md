@@ -18,10 +18,14 @@ Cuando se descargue, la instalamos en nuestro dispositivo Android
 
 ![imagen3](/images/img3.png)
 
-Ahora tenemos que darle permiso a Termux para acceder al almacenamiento, así cuando levantemos el servidor FTP podremos acceder a nuestros directorios.
+## Configuracion de Termux
 
-Vamos a ajustes y entramos en aplicaciones, buscamos Termux, entramos en permisos, y permitimos el acceso a almacenamiento.
+Para acceder a nuestros directorio al levantar el servidor FTP, tenemos que darle permiso a Termux para que acceda a nuestro almacenamiendo, para ello vamos a ajustes y entramos en aplicaciones, buscamos Termux, entramos en permisos, y permitimos el acceso a almacenamiento.
 
-## Configuraciones y despliegue del servidor FTP
+Lo siguiente que haremos será entrar a la terminal, al abrirlo por primera vez se harán unas configuraciones, cuando termine, nos encontraremos nuestra terminal lista para trabajar.
 
-Lo siguiente que haremos será entrar a la aplicación Termux
+Lo primero que haremos será asegurarnos de que estamos en el directorio home de Termux, este directorio /data/data/com.termux/files/home, podemos ver en que directorio estamos actualmente ejecutando el comando ``pwd``, si no nos encontramos en dicho directorio, basta con ejecutar ``cd``, es importante que nos encontremos en esa ruta.
+
+Lo siguiente es actualizar los repositorios de la terminal haciendo un update-upgrade, ejecutamos los comandos ``apt update`` y ``apt upgrade``
+
+Cuando termine de actualizarse la terminal, instalamos Python ejecutando el comando ``pkg install python``
